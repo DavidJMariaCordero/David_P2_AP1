@@ -12,5 +12,11 @@ namespace David_P2_AP1.DAL
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlite(@"Data Source = Data/Parcial.db");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+        
     }
 }
