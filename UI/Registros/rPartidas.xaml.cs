@@ -15,9 +15,9 @@ namespace David_P2_AP1.UI.Registros
     /// <summary>
     /// Interaction logic for Registro.xaml
     /// </summary>
-    public partial class Registro : Window
+    public partial class rPartidas: Window
     {
-        public Registro()
+        public rPartidas()
         {
             InitializeComponent();
         }
