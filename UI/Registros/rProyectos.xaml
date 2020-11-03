@@ -56,17 +56,16 @@
                         </Button>
 
                     </StackPanel>
-                    <StackPanel Height="165" Width="537" Margin="0,10,50,0">
-                        <DataGrid x:Name="TareasDataGrid" Height="165" AutoGenerateColumns="False" Width="384" ItemsSource="{Binding Detalle}" IsReadOnly="True" Margin="0,0,150,0">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn x:Name="TipoIdDataGridTextColum" Header="TipoId" Binding="{Binding TipoId}"/>
-                                <DataGridTextColumn x:Name="TipoTareaDataGridTextColum" Header="Tipo Tarea" Binding="{Binding TipoTarea}"/>
-                                <DataGridTextColumn x:Name="RequerimientoDataGridTextColum" Header="Requerimiento" Binding="{Binding Requerimientos}"/>
-                                <DataGridTextColumn x:Name="TiempoDataGridTextColum" Header="Tiempo" Binding="{Binding Tiempo}"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
 
-                    </StackPanel>
+                    <DataGrid x:Name="TareasDataGrid" Height="165" AutoGenerateColumns="False" Width="561" ItemsSource="{Binding Detalle}" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="TipoIdDataGridTextColum" Header="TipoId" Binding="{Binding TipoId}"/>
+                            <DataGridTextColumn x:Name="TipoTareaDataGridTextColum" Header="Tipo Tarea" Binding="{Binding TipoTarea}"/>
+                            <DataGridTextColumn x:Name="RequerimientoDataGridTextColum" Header="Requerimiento" Binding="{Binding Requerimientos}"/>
+                            <DataGridTextColumn x:Name="TiempoDataGridTextColum" Header="Tiempo" Binding="{Binding Tiempo}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    
                     <Button x:Name="RemoverBoton" Height="25" Margin="10,5,0,0" Width="175" Click="RemoverBoton_Click">
                         <StackPanel Orientation="Horizontal" Height="26">
                             <Image Source="\Iconos\eliminar.png" Width="17"/>
