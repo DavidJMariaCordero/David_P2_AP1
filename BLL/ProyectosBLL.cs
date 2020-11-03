@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace David_P2_AP1.BLL
@@ -98,7 +99,7 @@ namespace David_P2_AP1.BLL
             try
             {
                 proyecto = contexto.Proyectos.Include(p => p.Detalle)
-                    .Where(p => proyecto.ProyectoId == id)
+                    .Where(p => p.ProyectoId == id)
                     .SingleOrDefault();
             }
             catch (Exception)
@@ -131,6 +132,44 @@ namespace David_P2_AP1.BLL
             }
 
             return encontrado;
+        }
+
+        public static List<Proyectos> GetList()
+        {
+            List<Proyectos> lista = new List<Proyectos>();
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                lista = contexto.Proyectos.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return lista;
+        }
+        public static List<Proyectos> GetList(Expression<Func<Proyectos, bool>> criterio)
+        {
+            List<Proyectos> lista = new List<Proyectos>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                lista = contexto.Proyectos.Where(criterio).AsNoTracking().ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return lista;
         }
 
     }

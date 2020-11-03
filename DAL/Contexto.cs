@@ -8,6 +8,8 @@ namespace David_P2_AP1.DAL
 {
     public class Contexto : DbContext
     {
+        public DbSet<Proyectos> Proyectos { get; set; }
+        public DbSet<TipoTareas> TipoTareas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using David_P2_AP1.UI.Consultas;
+using David_P2_AP1.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,16 @@ namespace David_P2_AP1
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void rProyectos_Click(object sender, RoutedEventArgs e)
+        {
+            rProyectos rProyecto = new rProyectos();
+            rProyecto.Show();
+        }
+        private void cProyectos_Click(object sender, RoutedEventArgs e)
+        {
+            cProyectos cProyecto = new cProyectos();
+            cProyecto.Show();
         }
     }
 }

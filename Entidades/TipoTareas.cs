@@ -12,14 +12,6 @@ namespace David_P2_AP1.Entidades
         public int TipoId { get; set; }
         public string Descripcion { get; set; }
 
-        public TipoTareas(int id, string descripcion)
-        {
-            this.TipoId = id;
-            this.Descripcion = descripcion;
-        }
-
-        public TipoTareas()
-        {
-        }
+        public TipoTareas() { }
     }
 }
