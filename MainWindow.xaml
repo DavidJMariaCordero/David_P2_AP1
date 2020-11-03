@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:David_P2_AP1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="109" Width="184">
     <Grid>
-        <StackPanel>
+        <StackPanel Grid.ColumnSpan="2">
             <StackPanel Orientation = "Horizontal">
                 <Menu Height="18">
                     <MenuItem Header="Registros">

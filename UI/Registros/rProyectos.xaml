@@ -10,10 +10,10 @@
         <StackPanel>
 
             <!--Panel Id-->
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Id:"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Proyecto Id:" Margin="14,0,0,0"/>
                 <TextBox x:Name="ProyectoIdTextBox" Width="100"/>
-                <Button x:Name="BuscarBoton"  Click="BuscarBoton_Click">
+                <Button x:Name="BuscarBoton"  Click="BuscarBoton_Click" Margin="10,0,0,0">
                     <StackPanel Orientation="Horizontal">
                         <Image Width="18" Height="18" Stretch = "Fill" Source="\Iconos\lupa.png"/>
                         <TextBlock Text="Buscar" />
@@ -21,12 +21,12 @@
                 </Button>
             </StackPanel>
             <StackPanel Orientation="Vertical" Width="550" Height="58">
-                <Label Content="Fecha"/>
+                <Label Content="Fecha" Width="548"/>
                 <DatePicker x:Name="FechaDatePicker" Height="27" Width="122" Margin="0,0,420,0" SelectedDate="{Binding Fecha}"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Width="550" Height="102">
-                <Label Content="Descripcion del poryecto"/>
-                <TextBox Height="69" x:Name="DescripcionTextBox" TextWrapping="Wrap" Width="534" BorderBrush="Black" Text="{Binding Descripcion}"/>
+                <Label Content="Descripcion del proyecto" Width="551"/>
+                <TextBox Height="69" x:Name="DescripcionTextBox" TextWrapping="Wrap" Width="544" BorderBrush="Black" Text="{Binding Descripcion}"/>
 
             </StackPanel>
 
